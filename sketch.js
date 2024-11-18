@@ -32,7 +32,8 @@ function draw() {
   fill("gray")
   textSize(100)
   text(score, width / 2, height / 2)
-  player.collide(edges)
+  if(gamestate == "play") {
+    player.collide(edges)
   if(player.isTouching(oGroup)) {
     gamestate = "end"
   }
@@ -56,13 +57,18 @@ function draw() {
     score += 1
   }
   spawnObstacles()
+  }
+  if(gamestate == "end") {
+    oGroup.setVelocityYEach(0)
+  }
+  
   drawSprites()
 }
 
 function spawnObstacles() {
   if(frameCount % 15 == 0) {
     randomX = Math.round(random(0, width))
-    o = createSprite(randomX, -20, 40, 40)
+    o = createSprite(randomX, -40, 40, 40)
     o.shapeColor = "red"
     o.velocityY += 10
     o.lifetime = (height + 20) / 10
