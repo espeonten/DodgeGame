@@ -1,0 +1,28 @@
+function createPlayers() {
+    player = createSprite(20, height - 30, 40, 40)
+    player.shapeColor = rgb(0, 0, 105)
+    player2 = createSprite(20, height - 30, 40, 40)
+    player2.shapeColor = rgb(0, 0, 155, 0.7)
+    player3 = createSprite(20, height - 30, 40, 40)
+    player3.shapeColor = rgb(0, 0, 205, 0.6)
+    player4 = createSprite(20, height - 30, 40, 40)
+    player4.shapeColor = rgb(0, 0, 255, 0.5)
+    player5 = createSprite(20, height - 30, 40, 40)
+    player5.shapeColor = rgb(0, 0, 255, 0.4)
+    player6 = createSprite(20, height - 30, 40, 40)
+    player6.shapeColor = rgb(0, 0, 255, 0.3)
+    player7 = createSprite(20, height - 30, 40, 40)
+    player7.shapeColor = rgb(0, 0, 255, 0.2)
+    player8 = createSprite(20, height - 30, 40, 40)
+    player8.shapeColor = rgb(0, 0, 255, 0.1)
+}
+function collidePlayers() {
+    player.collide(edges)
+    player2.collide(edges)
+    player3.collide(edges)
+    player4.collide(edges)
+    player5.collide(edges)
+    player6.collide(edges)
+    player7.collide(edges)
+    player8.collide(edges)
+}
